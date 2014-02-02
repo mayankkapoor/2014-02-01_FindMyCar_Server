@@ -10,6 +10,7 @@ https://docs.djangoproject.com/en/1.6/ref/settings/
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
+import dj_database_url
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
 
@@ -57,12 +58,12 @@ WSGI_APPLICATION = 'findmycarproject.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.6/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-    }
-}
+# heroku database config
+# use sqlite for local development (when DATABASE_URL isn't
+# defined, as that is # what dj_database_url is looking for).
+sqlite_db = os.path.join(BASE_DIR, 'db.sqlite3')
+
+DATABASES = {'default': dj_database_url.config(default='sqlite://mayankkapoor:test123@localhost/')}
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.6/topics/i18n/
