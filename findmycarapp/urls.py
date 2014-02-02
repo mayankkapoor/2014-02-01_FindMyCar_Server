@@ -1,6 +1,6 @@
 from django.conf.urls import patterns, include, url
 
-from findmycarproject.findmycarapp import views_controller
+from findmycarapp import views_controller
 
 urlpatterns = patterns('',
     # Examples:

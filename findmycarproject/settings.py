@@ -11,7 +11,8 @@ https://docs.djangoproject.com/en/1.6/ref/settings/
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
 import dj_database_url
-BASE_DIR = os.path.dirname(os.path.dirname(__file__)) #directory of manage.py
+
+BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
 
 # Quick-start development settings - unsuitable for production
@@ -38,7 +39,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'south',
-    'findmycarproject.findmycarapp',
+    'findmycarapp',
 )
 
 MIDDLEWARE_CLASSES = (
