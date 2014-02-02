@@ -50,9 +50,9 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
-ROOT_URLCONF = 'findmycarproject.urls'
+ROOT_URLCONF = 'urls'
 
-WSGI_APPLICATION = 'findmycarproject.wsgi.application'
+WSGI_APPLICATION = 'wsgi.application'
 
 
 # Database
