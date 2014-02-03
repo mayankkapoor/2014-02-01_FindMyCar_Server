@@ -1,8 +1,14 @@
 Django==1.6.1
+SocksiPy-branch==1.01
 South==0.8.4
 dj-database-url==0.2.2
 dj-static==0.0.5
 gunicorn==18.0
+httplib2==0.8
 pystache==0.5.3
+requests==2.2.1
+six==1.5.2
 static==1.0.2
+twilio==3.6.4
+unittest2py3k==0.5.1
 psycopg2==2.5.2
