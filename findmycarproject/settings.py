@@ -63,8 +63,13 @@ WSGI_APPLICATION = 'findmycarproject.wsgi.application'
 # use sqlite for local development (when DATABASE_URL isn't
 # defined, as that is # what dj_database_url is looking for).
 sqlite_db = os.path.join(BASE_DIR, 'db.sqlite3')
-
-DATABASES = {'default': dj_database_url.config(default='sqlite://mayankkapoor:test123@localhost/')}
+DATABASES = {'default': dj_database_url.config(default='sqlite://///Users/mayankkapoor/Dropbox/GitHub/2014-02-01_FindMyCar_Server/db.sqlite3')}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#     }
+# }
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.6/topics/i18n/
