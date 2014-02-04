@@ -8,6 +8,7 @@ import logging
 import sys
 from urllib.parse import urlparse, parse_qs
 import re
+from django.views.decorators.csrf import csrf_exempt
 
 # Create your views here.
 log = logging.getLogger(__name__)
@@ -32,7 +33,7 @@ def send_request_sms_to_device(device_id):
 	device = Device.objects.get(device_id=device_id)
 	send_sms(device.device_phone_no, "This is FindMyCar App. Reply back with location.")
 
-
+@csrf_exempt
 def receive_sms(request):
 	sms_from = sms_to = sms_body = gps_lat = gps_long = None
 	l = []
