@@ -7,6 +7,9 @@ class Device(models.Model):
 	device_manufacturer = models.CharField(max_length=200, blank=True)
 	device_model_no = models.CharField(max_length=200, blank=True) #different devices can have different sms formats
 
+	def __str__(self):
+		return u'id: %s, device_phone_no: %s' % (self.device_id, self.device_phone_no)
+
 class LocationSMS(models.Model):
 	sms_from = models.CharField(max_length=30, blank=False)
 	sms_to = models.CharField(max_length=30, blank=True)

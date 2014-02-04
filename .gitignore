@@ -42,3 +42,5 @@ staticfiles
 .idea
 logs*
 workspace.xml
+.idea/
+
