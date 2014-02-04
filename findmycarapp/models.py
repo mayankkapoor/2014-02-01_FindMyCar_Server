@@ -23,3 +23,6 @@ class LocationSMS(models.Model):
 	gps_longitude = models.FloatField(null=False)
 	created_on = models.DateTimeField(auto_now_add=True, editable=False)
 
+	def __str__(self):
+		return u'sms_from: %s, lat: %s, long: %s' % (self.sms_from, self.gps_latitude, self.gps_longitude)
+

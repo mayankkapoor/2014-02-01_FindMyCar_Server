@@ -7,6 +7,6 @@ urlpatterns = patterns('',
     # url(r'^$', 'findmycarproject.views.home', name='home'),
     # url(r'^blog/', include('blog.urls')),
     url(r'^$', views_controller.index, name='index'),
-    url(r'^send_sms/', views_controller.send_SMS),
+    url(r'^receive_sms/', views_controller.receive_sms, name='receive_sms')
 
 )
